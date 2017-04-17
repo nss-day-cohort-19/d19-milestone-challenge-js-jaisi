@@ -34,21 +34,27 @@ function tree(){
 	}
 	else 
 	{
-		tree = "";
+		var tree = "";
+		var blank= " ";
+
 		console.log("char",char); 
-
+		var j=height-1;
 		for(i=0; i<height;i++){
-
+			
+			blank=blank.repeat(j);
 			if (i===0){
-				tree += char;
-			}
-			else{
-				tree += char+char;
-			}
-
-
-			console.log(tree);
-		}
-	}
+ 				tree += char;
+ 			}
+ 			else{
+ 				tree += char+char;
+ 			}
+ 
+ 			
+ 			console.log(blank+tree);
+ 			blank=" ";
+ 			j--;
+ 			
+ 		}
+}
 }
 
